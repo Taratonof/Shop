@@ -1,0 +1,66 @@
+.main {
+  text-align: center;
+  .product-list {
+    display: inline-block;
+    margin: 0 auto;
+    min-height: 389px;
+
+    button {
+      margin-top: 20px;
+      margin-left: 50px;
+      margin-bottom: 20px;
+      cursor: pointer;
+      background-color: #49b76c;
+      border: 2px solid #6cd18c;
+      border-radius: 5px;
+      color: #00561c;
+      font-size: 15px;
+      outline: none;
+
+      &:hover {
+        background-color: #00ce3d;
+      }
+    }
+
+    table {
+      text-align: left;
+      border-collapse: collapse;
+      width: 750px;
+
+      thead {
+        border: black solid 2px;
+        cursor: pointer;
+        background-color: #4657d6;
+        color: #fcdf05;
+
+        select {
+          cursor: pointer;
+        }
+      }
+
+      td, th {
+        padding: 3px;
+        border: black solid 1px;
+        cursor: pointer;
+
+        input {
+          cursor: pointer;
+        }
+      }
+
+      tr {
+        background-color: #fff;
+
+        &:hover {
+          background-color: #fcde9c;
+        }
+      }
+    }
+  }
+
+  .image-cat {
+    display: block;
+    margin: 50px auto 0;
+    width: 500px;
+  }
+}

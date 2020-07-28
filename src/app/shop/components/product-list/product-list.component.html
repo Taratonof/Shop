@@ -1,0 +1,30 @@
+<div class="main">
+  <div class="product-list">
+    <button (click)="addToCart()">В корзину</button>
+    <table>
+      <thead>
+      <th>Выбран</th>
+      <th>
+        Категория
+        <select #groups name="groups" (change)="selectGroup(+groups.value)">
+          <option value="{{-1}}">Все</option>
+          <option *ngFor="let group of uniqGroups" value="{{group.id}}">{{this.upperCaseFirstSymbol(group.name)}}</option>
+        </select>
+      </th>
+      <th (click)="sortProductsByAlph()">Товар</th>
+      <th (click)="sortProductsByPrice()">Цена</th>
+      </thead>
+      <tbody>
+      <tr *ngFor="let product of productList" (click)="selectProduct(product.id)">
+        <td>
+          <input type="checkbox" [checked]=product.checked>
+        </td>
+        <td>{{this.upperCaseFirstSymbol(product.group.name)}}</td>
+        <td>{{product.name}}</td>
+        <td>{{product.price}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <img class="image-cat" src="assets/images/shop/cat.jpg">
+</div>
