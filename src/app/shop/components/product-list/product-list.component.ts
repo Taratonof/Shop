@@ -70,6 +70,7 @@ export class ProductListComponent implements OnInit {
       this.productList = this.allProducts;
       return;
     }
+    this.productList.forEach(product => product.checked = false);
     this.productList = this.allProducts.filter(product => product.group.id === id);
   }
 
